@@ -1,0 +1,184 @@
+/* ============================================
+   WHATSAPP FLUTUANTE
+   ============================================ */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    animation: bounce 2s infinite;
+}
+
+.whatsapp-float a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25d366 0%, #20ba58 100%);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.whatsapp-float a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+    background: linear-gradient(135deg, #20ba58 0%, #1da851 100%);
+}
+
+.whatsapp-float a:active {
+    transform: scale(0.95);
+}
+
+/* Animação de bounce */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-float a {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-float a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+}
+
+/* Tooltip ao passar o mouse */
+.whatsapp-float::before {
+    content: 'Fale conosco!';
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: rgba(37, 211, 102, 0.95);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-weight: 600;
+}
+
+.whatsapp-float:hover::before {
+    opacity: 1;
+}
+
+
+/* ============================================
+   CHATBOT FLUTUANTE
+   ============================================ */
+
+.chatbot-float {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 998;
+    animation: bounce 2s infinite;
+}
+
+.chatbot-float a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.chatbot-float a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.chatbot-float a:active {
+    transform: scale(0.95);
+}
+
+/* Tooltip ao passar o mouse */
+.chatbot-float::before {
+    content: 'Solicitar Teste';
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: rgba(102, 126, 234, 0.95);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-weight: 600;
+}
+
+.chatbot-float:hover::before {
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .chatbot-float {
+        bottom: 90px;
+        right: 20px;
+    }
+
+    .chatbot-float a {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .chatbot-float {
+        bottom: 85px;
+        right: 15px;
+    }
+
+    .chatbot-float a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+}
